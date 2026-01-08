@@ -1,0 +1,1371 @@
+<html lang="en" class="scroll-smooth bg-[#030303] text-white antialiased"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Social Collars | Scale Your Info-Business</title>
+<!-- Fonts: Clash Display (Headings) & Satoshi (Body) -->
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600&amp;f[]=satoshi@300,400,500&amp;display=swap" rel="stylesheet">
+<!-- Iconify / Lucide -->
+<script src="https://unpkg.com/lucide@latest"></script>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        brand: '#228B22', 
+        accent: '#4ade80',
+        void: '#030303',
+      },
+      fontFamily: {
+        sans: ['Satoshi', 'sans-serif'],
+        display: ['Clash Display', 'sans-serif'],
+      },
+      letterSpacing: {
+        tighter: '-0.03em',
+        tight: '-0.01em',
+        widest: '0.15em',
+      },
+      animation: {
+        'blob': 'blob 20s infinite',
+        'fade-up': 'fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+        'shimmer': 'shimmer 8s linear infinite',
+      },
+      keyframes: {
+        blob: {
+          '0%': { transform: 'translate(0px, 0px) scale(1)' },
+          '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+          '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+          '100%': { transform: 'translate(0px, 0px) scale(1)' },
+        },
+        fadeUp: {
+          '0%': { opacity: 0, transform: 'translateY(20px)' },
+          '100%': { opacity: 1, transform: 'translateY(0)' },
+        },
+        shimmer: {
+          '0%': { backgroundPosition: '200% 0' },
+          '100%': { backgroundPosition: '-200% 0' }
+        }
+      }
+    }
+  }
+}
+</script>
+<style>
+/* Cinematic Grain Overlay */
+.bg-noise {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.04;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #030303; }
+::-webkit-scrollbar-thumb { background: #333; border-radius: 2px; }
+
+/* Utilities */
+.glass-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+}
+.text-glow {
+    text-shadow: 0 0 30px rgba(34, 139, 34, 0.3);
+}
+
+/* Animations */
+.reveal-item { opacity: 0; transform: translateY(20px); transition: all 0.8s ease-out; }
+.reveal-active { opacity: 1; transform: translateY(0); }
+
+/* Congruent Headline Style */
+.hero-label {
+    font-family: 'Satoshi', sans-serif;
+    font-size: 0.75rem; /* xs */
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 1.5rem;
+    display: block;
+}
+.hero-title {
+    font-family: 'Clash Display', sans-serif;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    font-weight: 500; /* Semibold/Medium */
+}
+.hero-accent {
+    color: #228B22; /* Brand Color */
+    font-style: italic;
+    position: relative;
+    display: inline-block;
+}
+</style>
+<link id="all-fonts-link-font-geist" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-geist">.font-geist { font-family: 'Geist', sans-serif !important; }</style><link id="all-fonts-link-font-roboto" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-roboto">.font-roboto { font-family: 'Roboto', sans-serif !important; }</style><link id="all-fonts-link-font-montserrat" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-montserrat">.font-montserrat { font-family: 'Montserrat', sans-serif !important; }</style><link id="all-fonts-link-font-poppins" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-poppins">.font-poppins { font-family: 'Poppins', sans-serif !important; }</style><link id="all-fonts-link-font-playfair" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;900&amp;display=swap"><style id="all-fonts-style-font-playfair">.font-playfair { font-family: 'Playfair Display', serif !important; }</style><link id="all-fonts-link-font-instrument-serif" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:wght@400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-instrument-serif">.font-instrument-serif { font-family: 'Instrument Serif', serif !important; }</style><link id="all-fonts-link-font-merriweather" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&amp;display=swap"><style id="all-fonts-style-font-merriweather">.font-merriweather { font-family: 'Merriweather', serif !important; }</style><link id="all-fonts-link-font-bricolage" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-bricolage">.font-bricolage { font-family: 'Bricolage Grotesque', sans-serif !important; }</style><link id="all-fonts-link-font-jakarta" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap"><style id="all-fonts-style-font-jakarta">.font-jakarta { font-family: 'Plus Jakarta Sans', sans-serif !important; }</style><link id="all-fonts-link-font-manrope" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap"><style id="all-fonts-style-font-manrope">.font-manrope { font-family: 'Manrope', sans-serif !important; }</style><link id="all-fonts-link-font-space-grotesk" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-space-grotesk">.font-space-grotesk { font-family: 'Space Grotesk', sans-serif !important; }</style><link id="all-fonts-link-font-work-sans" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800&amp;display=swap"><style id="all-fonts-style-font-work-sans">.font-work-sans { font-family: 'Work Sans', sans-serif !important; }</style><link id="all-fonts-link-font-pt-serif" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&amp;display=swap"><style id="all-fonts-style-font-pt-serif">.font-pt-serif { font-family: 'PT Serif', serif !important; }</style><link id="all-fonts-link-font-geist-mono" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-geist-mono">.font-geist-mono { font-family: 'Geist Mono', monospace !important; }</style><link id="all-fonts-link-font-space-mono" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;display=swap"><style id="all-fonts-style-font-space-mono">.font-space-mono { font-family: 'Space Mono', monospace !important; }</style><link id="all-fonts-link-font-quicksand" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-quicksand">.font-quicksand { font-family: 'Quicksand', sans-serif !important; }</style><link id="all-fonts-link-font-nunito" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&amp;display=swap"><style id="all-fonts-style-font-nunito">.font-nunito { font-family: 'Nunito', sans-serif !important; }</style><link id="all-fonts-link-font-newsreader" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400..800&amp;display=swap"><style id="all-fonts-style-font-newsreader">.font-newsreader { font-family: 'Newsreader', serif !important; }</style><link id="all-fonts-link-font-google-sans-flex" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-google-sans-flex">.font-google-sans-flex { font-family: 'Google Sans Flex', sans-serif !important; }</style><link id="all-fonts-link-font-oswald" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-oswald">.font-oswald { font-family: 'Oswald', sans-serif !important; }</style><link id="all-fonts-link-font-dm-sans" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-dm-sans">.font-dm-sans { font-family: 'DM Sans', sans-serif !important; }</style></head>
+<body class="overflow-x-hidden selection:bg-brand/30 selection:text-white relative">
+
+    <!-- ATMOSPHERE: Grain & Orbs -->
+    <div class="bg-noise"></div>
+    <div class="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
+        <!-- Orb 1 -->
+        <div class="absolute top-[-10%] left-[20%] w-[500px] h-[500px] bg-brand/10 rounded-full blur-[120px] mix-blend-screen animate-blob"></div>
+        <!-- Orb 2 -->
+        <div class="absolute bottom-[-10%] right-[10%] w-[600px] h-[600px] bg-emerald-900/10 rounded-full blur-[120px] mix-blend-screen animate-blob animation-delay-2000"></div>
+        <!-- Orb 3 -->
+        <div class="absolute top-[40%] left-[-10%] w-[400px] h-[400px] bg-white/5 rounded-full blur-[100px] mix-blend-overlay animate-blob animation-delay-4000"></div>
+    </div>
+
+    <!-- HEADER: Minimalist -->
+    <header class="fixed top-0 left-0 w-full z-50 py-8 transition-all duration-500">
+        <div class="container mx-auto px-6 flex justify-center">
+            <div class="glass-card px-6 py-3 rounded-full flex items-center gap-3 cursor-pointer hover:border-brand/30 transition-colors" onclick="router.navigate('home')">
+                <div class="w-2 h-2 rounded-full bg-brand animate-pulse"></div>
+                <h1 class="font-display font-medium text-sm tracking-widest uppercase text-white/90">
+                    Social Collars
+                </h1>
+            </div>
+        </div>
+    </header>
+
+    <!-- ROUTER CONTAINER -->
+    <main id="app-container" class="pt-32 pb-24 relative z-10">
+        
+        <!-- ================= PAGE 1: HOME ================= -->
+        <section id="page-home" class="page-view min-h-screen">
+            
+            <!-- HERO SECTION -->
+            <div class="container mx-auto px-4 md:px-6 mb-32 relative">
+                <div class="max-w-5xl mx-auto text-center flex flex-col items-center">
+                    
+                    <!-- CONGRUENT HEADLINE DESIGN -->
+                    <div class="reveal-item reveal-active">
+                        <span class="hero-label border border-white/5 bg-white/[0.02] px-4 py-2 rounded-full inline-block backdrop-blur-md">
+                            Architecting High-Value Offers
+                        </span>
+                        <h2 class="hero-title md:text-6xl lg:text-7xl text-4xl text-white mb-8">
+                            We Help Coaches Generate <br class="hidden md:block">
+                            <span class="hero-accent text-glow">$174,000+ In Profits</span> <br class="hidden md:block">
+                            Using The AI I.O.S.™ Framework
+                        </h2>
+                    </div>
+
+                    <p class="reveal-item text-sm md:text-base text-white/40 max-w-xl leading-relaxed mb-12 font-sans reveal-active">
+                        Scale without a large audience, without working 12 hour days, and without being positioned as just another "guru".
+                    </p>
+
+                    <!-- VSL FRAME -->
+                    <div class="reveal-item w-full max-w-4xl relative group cursor-pointer mb-10 reveal-active">
+                        <!-- Animated Border Gradient -->
+                        <div class="absolute -inset-[1px] bg-gradient-to-r from-transparent via-brand/50 to-transparent rounded-2xl opacity-20 group-hover:opacity-60 blur-sm transition-opacity duration-700 animate-shimmer bg-[length:200%_100%]"></div>
+                        
+                        <div class="relative aspect-video glass-card rounded-2xl overflow-hidden flex items-center justify-center bg-black/40">
+                            <div class="group-hover:opacity-100 transition-opacity duration-700 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-brand/10 to-transparent opacity-0 absolute top-0 right-0 bottom-0 left-0"></div>
+                            
+                            <div class="relative z-10 flex flex-col items-center gap-4 transition-transform duration-500 group-hover:scale-105">
+                                <div class="w-20 h-20 rounded-full border border-white/10 flex items-center justify-center bg-white/5 backdrop-blur-sm group-hover:bg-brand group-hover:border-brand group-hover:shadow-[0_0_30px_rgba(34,139,34,0.4)] transition-all duration-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-lucide="play" class="lucide lucide-play w-8 h-8 text-white fill-current ml-1"><path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z"></path></svg>
+                                </div>
+                                <span class="text-xs tracking-widest uppercase text-white/30 font-medium">Watch The Breakdown</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CTA -->
+                    <button onclick="router.navigate('booking')" class="reveal-item group relative inline-flex items-center justify-center gap-3 px-8 py-4 bg-white text-black rounded-full overflow-hidden transition-all hover:pr-10">
+                        <span class="absolute inset-0 w-full h-full bg-gradient-to-r from-gray-100 to-white opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                        <span class="relative font-display font-medium text-sm uppercase tracking-wide">Book Your Call</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-right" class="lucide lucide-arrow-right relative w-4 h-4 text-black transition-transform group-hover:translate-x-1"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                    </button>
+                    
+                    <p class="reveal-item mt-6 text-[10px] text-white/20 tracking-wider uppercase font-medium">
+                        Must watch video before booking
+                    </p>
+                </div>
+            </div>
+
+            <!-- RESULTS SECTION -->
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="flex flex-col items-center mb-24 reveal-item">
+                    <span class="w-px h-16 bg-gradient-to-b from-transparent via-white/20 to-transparent mb-6"></span>
+                    <h3 class="font-display text-2xl md:text-3xl text-white/90">Client Outcomes</h3>
+                </div>
+
+                <!-- DYNAMIC FEED -->
+                <div id="results-feed-home" class="grid grid-cols-1 gap-32">
+                    <div class="reveal-item flex flex-col md:flex-row items-center gap-12 group w-full max-w-5xl mx-auto">
+                        
+                        <!-- Typography Block -->
+                        <div class="w-full md:w-5/12 flex flex-col md:items-start text-center md:text-left relative z-10">
+                            <div class="flex items-center gap-3 mb-4 opacity-50 group-hover:opacity-100 transition-opacity">
+                                <span class="h-px w-8 bg-brand"></span>
+                                <span class="text-[10px] uppercase tracking-widest font-sans font-medium text-white/60">
+                                    Trading Coach
+                                </span>
+                                <span class="h-px w-8 bg-brand hidden"></span>
+                            </div>
+                            
+                            <h4 class="font-display text-2xl md:text-4xl font-medium leading-[1.1] text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-white/60 transition-all duration-500">
+                                "Generated $100,000 In Net Revenue In 3 Months"
+                            </h4>
+                        </div>
+
+                        <!-- Media Visual -->
+                        <div class="w-full md:w-7/12 relative">
+                            <div class="aspect-[16/9] w-full bg-black border border-white/5 rounded-sm overflow-hidden relative shadow-2xl transition-all duration-700 group-hover:scale-[1.02]">
+                                <!-- Inner Texture -->
+                                <div class="absolute inset-0 bg-noise opacity-20"></div>
+                                <div class="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent"></div>
+                                
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <div class="w-16 h-16 rounded-full border border-white/10 flex items-center justify-center backdrop-blur-sm bg-white/5 group-hover:scale-110 transition-transform duration-500">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-lucide="play" class="lucide lucide-play w-6 h-6 text-white/80"><path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z"></path></svg>
+                                    </div>
+                                </div>
+                                
+                                <!-- Tech Specs Corner -->
+                                <div class="absolute bottom-4 left-4 font-mono text-[9px] text-white/20 uppercase tracking-widest">
+                                    Asset_ID: 01 // video
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="reveal-item flex flex-col md:flex-row-reverse items-center gap-12 group w-full max-w-5xl mx-auto">
+                        
+                        <!-- Typography Block -->
+                        <div class="w-full md:w-5/12 flex flex-col md:items-end text-center md:text-right relative z-10">
+                            <div class="flex items-center gap-3 mb-4 opacity-50 group-hover:opacity-100 transition-opacity">
+                                <span class="h-px w-8 bg-brand"></span>
+                                <span class="text-[10px] uppercase tracking-widest font-sans font-medium text-white/60">
+                                    Spiritual Coach
+                                </span>
+                                <span class="h-px w-8 bg-brand block"></span>
+                            </div>
+                            
+                            <h4 class="font-display text-2xl md:text-4xl font-medium leading-[1.1] text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-white/60 transition-all duration-500">
+                                "I Don’t Wanna Talk To Anyone Else, This Is The Guy"
+                            </h4>
+                        </div>
+
+                        <!-- Media Visual -->
+                        <div class="w-full md:w-7/12 relative">
+                            <div class="aspect-[16/9] w-full bg-black border border-white/5 rounded-sm overflow-hidden relative shadow-2xl transition-all duration-700 group-hover:scale-[1.02]">
+                                <!-- Inner Texture -->
+                                <div class="absolute inset-0 bg-noise opacity-20"></div>
+                                <div class="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent"></div>
+                                
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <div class="w-16 h-16 rounded-full border border-white/10 flex items-center justify-center backdrop-blur-sm bg-white/5 group-hover:scale-110 transition-transform duration-500">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-lucide="play" class="lucide lucide-play w-6 h-6 text-white/80"><path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z"></path></svg>
+                                    </div>
+                                </div>
+                                
+                                <!-- Tech Specs Corner -->
+                                <div class="absolute bottom-4 left-4 font-mono text-[9px] text-white/20 uppercase tracking-widest">
+                                    Asset_ID: 02 // video
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="reveal-item flex flex-col md:flex-row items-center gap-12 group w-full max-w-5xl mx-auto">
+                        
+                        <!-- Typography Block -->
+                        <div class="w-full md:w-5/12 flex flex-col md:items-start text-center md:text-left relative z-10">
+                            <div class="flex items-center gap-3 mb-4 opacity-50 group-hover:opacity-100 transition-opacity">
+                                <span class="h-px w-8 bg-brand"></span>
+                                <span class="text-[10px] uppercase tracking-widest font-sans font-medium text-white/60">
+                                    Dev Creator
+                                </span>
+                                <span class="h-px w-8 bg-brand hidden"></span>
+                            </div>
+                            
+                            <h4 class="font-display text-2xl md:text-4xl font-medium leading-[1.1] text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-white/60 transition-all duration-500">
+                                "Generated 100K+ Views For Lewis Howes"
+                            </h4>
+                        </div>
+
+                        <!-- Media Visual -->
+                        <div class="w-full md:w-7/12 relative">
+                            <div class="aspect-[16/9] w-full bg-black border border-white/5 rounded-sm overflow-hidden relative shadow-2xl transition-all duration-700 group-hover:scale-[1.02]">
+                                <!-- Inner Texture -->
+                                <div class="absolute inset-0 bg-noise opacity-20"></div>
+                                <div class="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent"></div>
+                                
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <div class="w-16 h-16 rounded-full border border-white/10 flex items-center justify-center backdrop-blur-sm bg-white/5 group-hover:scale-110 transition-transform duration-500">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-lucide="image" class="lucide lucide-image w-6 h-6 text-white/80"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect><circle cx="9" cy="9" r="2"></circle><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></svg>
+                                    </div>
+                                </div>
+                                
+                                <!-- Tech Specs Corner -->
+                                <div class="absolute bottom-4 left-4 font-mono text-[9px] text-white/20 uppercase tracking-widest">
+                                    Asset_ID: 03 // photo
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="reveal-item flex flex-col md:flex-row-reverse items-center gap-12 group w-full max-w-5xl mx-auto">
+                        
+                        <!-- Typography Block -->
+                        <div class="w-full md:w-5/12 flex flex-col md:items-end text-center md:text-right relative z-10">
+                            <div class="flex items-center gap-3 mb-4 opacity-50 group-hover:opacity-100 transition-opacity">
+                                <span class="h-px w-8 bg-brand"></span>
+                                <span class="text-[10px] uppercase tracking-widest font-sans font-medium text-white/60">
+                                    Agency Owner
+                                </span>
+                                <span class="h-px w-8 bg-brand block"></span>
+                            </div>
+                            
+                            <h4 class="font-display text-2xl md:text-4xl font-medium leading-[1.1] text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-white/60 transition-all duration-500">
+                                "The Content Actually Converts, Highly Recommended"
+                            </h4>
+                        </div>
+
+                        <!-- Media Visual -->
+                        <div class="w-full md:w-7/12 relative">
+                            <div class="aspect-[16/9] w-full bg-black border border-white/5 rounded-sm overflow-hidden relative shadow-2xl transition-all duration-700 group-hover:scale-[1.02]">
+                                <!-- Inner Texture -->
+                                <div class="absolute inset-0 bg-noise opacity-20"></div>
+                                <div class="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent"></div>
+                                
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <div class="w-16 h-16 rounded-full border border-white/10 flex items-center justify-center backdrop-blur-sm bg-white/5 group-hover:scale-110 transition-transform duration-500">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-lucide="play" class="lucide lucide-play w-6 h-6 text-white/80"><path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z"></path></svg>
+                                    </div>
+                                </div>
+                                
+                                <!-- Tech Specs Corner -->
+                                <div class="absolute bottom-4 left-4 font-mono text-[9px] text-white/20 uppercase tracking-widest">
+                                    Asset_ID: 04 // video
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="reveal-item flex flex-col md:flex-row items-center gap-12 group w-full max-w-5xl mx-auto">
+                        
+                        <!-- Typography Block -->
+                        <div class="w-full md:w-5/12 flex flex-col md:items-start text-center md:text-left relative z-10">
+                            <div class="flex items-center gap-3 mb-4 opacity-50 group-hover:opacity-100 transition-opacity">
+                                <span class="h-px w-8 bg-brand"></span>
+                                <span class="text-[10px] uppercase tracking-widest font-sans font-medium text-white/60">
+                                    Trading Coach
+                                </span>
+                                <span class="h-px w-8 bg-brand hidden"></span>
+                            </div>
+                            
+                            <h4 class="font-display text-2xl md:text-4xl font-medium leading-[1.1] text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-white/60 transition-all duration-500">
+                                "$20K Revenue, $12K Cash Collected In 48 Hours"
+                            </h4>
+                        </div>
+
+                        <!-- Media Visual -->
+                        <div class="w-full md:w-7/12 relative">
+                            <div class="aspect-[16/9] w-full bg-black border border-white/5 rounded-sm overflow-hidden relative shadow-2xl transition-all duration-700 group-hover:scale-[1.02]">
+                                <!-- Inner Texture -->
+                                <div class="absolute inset-0 bg-noise opacity-20"></div>
+                                <div class="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent"></div>
+                                
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <div class="w-16 h-16 rounded-full border border-white/10 flex items-center justify-center backdrop-blur-sm bg-white/5 group-hover:scale-110 transition-transform duration-500">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-lucide="image" class="lucide lucide-image w-6 h-6 text-white/80"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect><circle cx="9" cy="9" r="2"></circle><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></svg>
+                                    </div>
+                                </div>
+                                
+                                <!-- Tech Specs Corner -->
+                                <div class="absolute bottom-4 left-4 font-mono text-[9px] text-white/20 uppercase tracking-widest">
+                                    Asset_ID: 05 // photo
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="reveal-item flex flex-col md:flex-row-reverse items-center gap-12 group w-full max-w-5xl mx-auto">
+                        
+                        <!-- Typography Block -->
+                        <div class="w-full md:w-5/12 flex flex-col md:items-end text-center md:text-right relative z-10">
+                            <div class="flex items-center gap-3 mb-4 opacity-50 group-hover:opacity-100 transition-opacity">
+                                <span class="h-px w-8 bg-brand"></span>
+                                <span class="text-[10px] uppercase tracking-widest font-sans font-medium text-white/60">
+                                    Affiliate Coach
+                                </span>
+                                <span class="h-px w-8 bg-brand block"></span>
+                            </div>
+                            
+                            <h4 class="font-display text-2xl md:text-4xl font-medium leading-[1.1] text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-white/60 transition-all duration-500">
+                                "286K+ Views In Less Than 14 Days"
+                            </h4>
+                        </div>
+
+                        <!-- Media Visual -->
+                        <div class="w-full md:w-7/12 relative">
+                            <div class="aspect-[16/9] w-full bg-black border border-white/5 rounded-sm overflow-hidden relative shadow-2xl transition-all duration-700 group-hover:scale-[1.02]">
+                                <!-- Inner Texture -->
+                                <div class="absolute inset-0 bg-noise opacity-20"></div>
+                                <div class="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent"></div>
+                                
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <div class="w-16 h-16 rounded-full border border-white/10 flex items-center justify-center backdrop-blur-sm bg-white/5 group-hover:scale-110 transition-transform duration-500">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-lucide="image" class="lucide lucide-image w-6 h-6 text-white/80"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect><circle cx="9" cy="9" r="2"></circle><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></svg>
+                                    </div>
+                                </div>
+                                
+                                <!-- Tech Specs Corner -->
+                                <div class="absolute bottom-4 left-4 font-mono text-[9px] text-white/20 uppercase tracking-widest">
+                                    Asset_ID: 06 // photo
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="reveal-item flex flex-col md:flex-row items-center gap-12 group w-full max-w-5xl mx-auto">
+                        
+                        <!-- Typography Block -->
+                        <div class="w-full md:w-5/12 flex flex-col md:items-start text-center md:text-left relative z-10">
+                            <div class="flex items-center gap-3 mb-4 opacity-50 group-hover:opacity-100 transition-opacity">
+                                <span class="h-px w-8 bg-brand"></span>
+                                <span class="text-[10px] uppercase tracking-widest font-sans font-medium text-white/60">
+                                    Trading Coach
+                                </span>
+                                <span class="h-px w-8 bg-brand hidden"></span>
+                            </div>
+                            
+                            <h4 class="font-display text-2xl md:text-4xl font-medium leading-[1.1] text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-white/60 transition-all duration-500">
+                                "Added $50,000 In Revenue For This Coach"
+                            </h4>
+                        </div>
+
+                        <!-- Media Visual -->
+                        <div class="w-full md:w-7/12 relative">
+                            <div class="aspect-[16/9] w-full bg-black border border-white/5 rounded-sm overflow-hidden relative shadow-2xl transition-all duration-700 group-hover:scale-[1.02]">
+                                <!-- Inner Texture -->
+                                <div class="absolute inset-0 bg-noise opacity-20"></div>
+                                <div class="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent"></div>
+                                
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <div class="w-16 h-16 rounded-full border border-white/10 flex items-center justify-center backdrop-blur-sm bg-white/5 group-hover:scale-110 transition-transform duration-500">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-lucide="image" class="lucide lucide-image w-6 h-6 text-white/80"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect><circle cx="9" cy="9" r="2"></circle><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></svg>
+                                    </div>
+                                </div>
+                                
+                                <!-- Tech Specs Corner -->
+                                <div class="absolute bottom-4 left-4 font-mono text-[9px] text-white/20 uppercase tracking-widest">
+                                    Asset_ID: 07 // photo
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="reveal-item flex flex-col md:flex-row-reverse items-center gap-12 group w-full max-w-5xl mx-auto">
+                        
+                        <!-- Typography Block -->
+                        <div class="w-full md:w-5/12 flex flex-col md:items-end text-center md:text-right relative z-10">
+                            <div class="flex items-center gap-3 mb-4 opacity-50 group-hover:opacity-100 transition-opacity">
+                                <span class="h-px w-8 bg-brand"></span>
+                                <span class="text-[10px] uppercase tracking-widest font-sans font-medium text-white/60">
+                                    Lifestyle Influencer
+                                </span>
+                                <span class="h-px w-8 bg-brand block"></span>
+                            </div>
+                            
+                            <h4 class="font-display text-2xl md:text-4xl font-medium leading-[1.1] text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-white/60 transition-all duration-500">
+                                "Scaled From 350 Views to 110K Views On YouTube"
+                            </h4>
+                        </div>
+
+                        <!-- Media Visual -->
+                        <div class="w-full md:w-7/12 relative">
+                            <div class="aspect-[16/9] w-full bg-black border border-white/5 rounded-sm overflow-hidden relative shadow-2xl transition-all duration-700 group-hover:scale-[1.02]">
+                                <!-- Inner Texture -->
+                                <div class="absolute inset-0 bg-noise opacity-20"></div>
+                                <div class="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent"></div>
+                                
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <div class="w-16 h-16 rounded-full border border-white/10 flex items-center justify-center backdrop-blur-sm bg-white/5 group-hover:scale-110 transition-transform duration-500">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-lucide="image" class="lucide lucide-image w-6 h-6 text-white/80"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect><circle cx="9" cy="9" r="2"></circle><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></svg>
+                                    </div>
+                                </div>
+                                
+                                <!-- Tech Specs Corner -->
+                                <div class="absolute bottom-4 left-4 font-mono text-[9px] text-white/20 uppercase tracking-widest">
+                                    Asset_ID: 08 // photo
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="reveal-item flex flex-col md:flex-row items-center gap-12 group w-full max-w-5xl mx-auto">
+                        
+                        <!-- Typography Block -->
+                        <div class="w-full md:w-5/12 flex flex-col md:items-start text-center md:text-left relative z-10">
+                            <div class="flex items-center gap-3 mb-4 opacity-50 group-hover:opacity-100 transition-opacity">
+                                <span class="h-px w-8 bg-brand"></span>
+                                <span class="text-[10px] uppercase tracking-widest font-sans font-medium text-white/60">
+                                    Fashion Influencer
+                                </span>
+                                <span class="h-px w-8 bg-brand hidden"></span>
+                            </div>
+                            
+                            <h4 class="font-display text-2xl md:text-4xl font-medium leading-[1.1] text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-white/60 transition-all duration-500">
+                                "1.1M+ Views Generated Organically"
+                            </h4>
+                        </div>
+
+                        <!-- Media Visual -->
+                        <div class="w-full md:w-7/12 relative">
+                            <div class="aspect-[16/9] w-full bg-black border border-white/5 rounded-sm overflow-hidden relative shadow-2xl transition-all duration-700 group-hover:scale-[1.02]">
+                                <!-- Inner Texture -->
+                                <div class="absolute inset-0 bg-noise opacity-20"></div>
+                                <div class="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent"></div>
+                                
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <div class="w-16 h-16 rounded-full border border-white/10 flex items-center justify-center backdrop-blur-sm bg-white/5 group-hover:scale-110 transition-transform duration-500">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-lucide="image" class="lucide lucide-image w-6 h-6 text-white/80"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect><circle cx="9" cy="9" r="2"></circle><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></svg>
+                                    </div>
+                                </div>
+                                
+                                <!-- Tech Specs Corner -->
+                                <div class="absolute bottom-4 left-4 font-mono text-[9px] text-white/20 uppercase tracking-widest">
+                                    Asset_ID: 09 // photo
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="reveal-item flex flex-col md:flex-row-reverse items-center gap-12 group w-full max-w-5xl mx-auto">
+                        
+                        <!-- Typography Block -->
+                        <div class="w-full md:w-5/12 flex flex-col md:items-end text-center md:text-right relative z-10">
+                            <div class="flex items-center gap-3 mb-4 opacity-50 group-hover:opacity-100 transition-opacity">
+                                <span class="h-px w-8 bg-brand"></span>
+                                <span class="text-[10px] uppercase tracking-widest font-sans font-medium text-white/60">
+                                    Trading Coach
+                                </span>
+                                <span class="h-px w-8 bg-brand block"></span>
+                            </div>
+                            
+                            <h4 class="font-display text-2xl md:text-4xl font-medium leading-[1.1] text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-white/60 transition-all duration-500">
+                                "Booked 6 Calls From One Instagram Story"
+                            </h4>
+                        </div>
+
+                        <!-- Media Visual -->
+                        <div class="w-full md:w-7/12 relative">
+                            <div class="aspect-[16/9] w-full bg-black border border-white/5 rounded-sm overflow-hidden relative shadow-2xl transition-all duration-700 group-hover:scale-[1.02]">
+                                <!-- Inner Texture -->
+                                <div class="absolute inset-0 bg-noise opacity-20"></div>
+                                <div class="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent"></div>
+                                
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <div class="w-16 h-16 rounded-full border border-white/10 flex items-center justify-center backdrop-blur-sm bg-white/5 group-hover:scale-110 transition-transform duration-500">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-lucide="image" class="lucide lucide-image w-6 h-6 text-white/80"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect><circle cx="9" cy="9" r="2"></circle><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></svg>
+                                    </div>
+                                </div>
+                                
+                                <!-- Tech Specs Corner -->
+                                <div class="absolute bottom-4 left-4 font-mono text-[9px] text-white/20 uppercase tracking-widest">
+                                    Asset_ID: 010 // photo
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="reveal-item flex flex-col md:flex-row items-center gap-12 group w-full max-w-5xl mx-auto">
+                        
+                        <!-- Typography Block -->
+                        <div class="w-full md:w-5/12 flex flex-col md:items-start text-center md:text-left relative z-10">
+                            <div class="flex items-center gap-3 mb-4 opacity-50 group-hover:opacity-100 transition-opacity">
+                                <span class="h-px w-8 bg-brand"></span>
+                                <span class="text-[10px] uppercase tracking-widest font-sans font-medium text-white/60">
+                                    Sales Coach
+                                </span>
+                                <span class="h-px w-8 bg-brand hidden"></span>
+                            </div>
+                            
+                            <h4 class="font-display text-2xl md:text-4xl font-medium leading-[1.1] text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-white/60 transition-all duration-500">
+                                "Closed Someone For $5K After One Training Call"
+                            </h4>
+                        </div>
+
+                        <!-- Media Visual -->
+                        <div class="w-full md:w-7/12 relative">
+                            <div class="aspect-[16/9] w-full bg-black border border-white/5 rounded-sm overflow-hidden relative shadow-2xl transition-all duration-700 group-hover:scale-[1.02]">
+                                <!-- Inner Texture -->
+                                <div class="absolute inset-0 bg-noise opacity-20"></div>
+                                <div class="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent"></div>
+                                
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <div class="w-16 h-16 rounded-full border border-white/10 flex items-center justify-center backdrop-blur-sm bg-white/5 group-hover:scale-110 transition-transform duration-500">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-lucide="image" class="lucide lucide-image w-6 h-6 text-white/80"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect><circle cx="9" cy="9" r="2"></circle><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></svg>
+                                    </div>
+                                </div>
+                                
+                                <!-- Tech Specs Corner -->
+                                <div class="absolute bottom-4 left-4 font-mono text-[9px] text-white/20 uppercase tracking-widest">
+                                    Asset_ID: 011 // photo
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="reveal-item flex flex-col md:flex-row-reverse items-center gap-12 group w-full max-w-5xl mx-auto">
+                        
+                        <!-- Typography Block -->
+                        <div class="w-full md:w-5/12 flex flex-col md:items-end text-center md:text-right relative z-10">
+                            <div class="flex items-center gap-3 mb-4 opacity-50 group-hover:opacity-100 transition-opacity">
+                                <span class="h-px w-8 bg-brand"></span>
+                                <span class="text-[10px] uppercase tracking-widest font-sans font-medium text-white/60">
+                                    Trading Coach
+                                </span>
+                                <span class="h-px w-8 bg-brand block"></span>
+                            </div>
+                            
+                            <h4 class="font-display text-2xl md:text-4xl font-medium leading-[1.1] text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-white/60 transition-all duration-500">
+                                "Generated 22 Qualified Leads In 2 Hours"
+                            </h4>
+                        </div>
+
+                        <!-- Media Visual -->
+                        <div class="w-full md:w-7/12 relative">
+                            <div class="aspect-[16/9] w-full bg-black border border-white/5 rounded-sm overflow-hidden relative shadow-2xl transition-all duration-700 group-hover:scale-[1.02]">
+                                <!-- Inner Texture -->
+                                <div class="absolute inset-0 bg-noise opacity-20"></div>
+                                <div class="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent"></div>
+                                
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <div class="w-16 h-16 rounded-full border border-white/10 flex items-center justify-center backdrop-blur-sm bg-white/5 group-hover:scale-110 transition-transform duration-500">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-lucide="image" class="lucide lucide-image w-6 h-6 text-white/80"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect><circle cx="9" cy="9" r="2"></circle><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></svg>
+                                    </div>
+                                </div>
+                                
+                                <!-- Tech Specs Corner -->
+                                <div class="absolute bottom-4 left-4 font-mono text-[9px] text-white/20 uppercase tracking-widest">
+                                    Asset_ID: 012 // photo
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BOTTOM CTA -->
+                <div class="mt-32 text-center reveal-item">
+                    <button onclick="router.navigate('booking')" class="px-10 py-4 rounded-full border border-white/10 hover:border-brand/50 bg-transparent text-white/80 hover:text-white hover:bg-brand/5 transition-all duration-500 font-display text-sm tracking-widest uppercase">
+                        Start Your Transformation
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PAGE 2: BOOKING ================= -->
+        <section id="page-booking" class="page-view hidden min-h-screen flex flex-col items-center">
+            <div class="container mx-auto px-4 max-w-4xl text-center">
+                
+                <!-- CONGRUENT HEADLINE DESIGN -->
+                <div class="mb-12 animate-fade-up">
+                    <span class="hero-label text-brand">Next Step</span>
+                    <h2 class="hero-title text-4xl md:text-5xl text-white mb-6">
+                        Secure Your <span class="hero-accent italic">Strategy Session</span>
+                    </h2>
+                    <p class="text-sm text-white/40 max-w-lg mx-auto">
+                        Select a time below. Our calendar loads in real-time, please allow a few seconds.
+                    </p>
+                </div>
+
+                <!-- CALENDAR CONTAINER -->
+                <div class="w-full h-[700px] glass-card rounded-xl border border-white/5 relative overflow-hidden flex flex-col items-center justify-center animate-fade-up" style="animation-delay: 0.1s;">
+                    <!-- Loading Animation -->
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-brand/5 to-transparent opacity-20 animate-pulse pointer-events-none"></div>
+                    
+                    <div class="text-center z-10 p-8">
+                        <div class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center mx-auto mb-4 border border-white/10">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-lucide="calendar" class="lucide lucide-calendar w-5 h-5 text-white/60"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg>
+                        </div>
+                        <h3 class="font-display text-lg text-white mb-2">Calendar Embed Area</h3>
+                        <p class="text-xs text-white/30 font-mono">iframe_placeholder_v1.0</p>
+                    </div>
+                </div>
+
+                <div class="mt-8 flex flex-col items-center gap-4 animate-fade-up" style="animation-delay: 0.2s;">
+                    <p class="text-xs text-white/30">
+                        Can't find a time? <a href="#" class="text-white hover:text-brand underline decoration-white/20 underline-offset-4 transition-colors">Message on Instagram</a>
+                    </p>
+                    
+                    <!-- DEMO ONLY -->
+                    <button onclick="router.navigate('thankyou')" class="text-[10px] text-white/10 hover:text-brand border border-white/5 hover:border-brand/20 px-3 py-1 rounded transition-colors uppercase tracking-widest">
+                        [Dev: Simulate Success]
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PAGE 3: THANK YOU ================= -->
+        <section id="page-thankyou" class="page-view hidden min-h-screen">
+            
+            <div class="container mx-auto px-4 md:px-6 mb-24 text-center">
+                <!-- CONGRUENT HEADLINE DESIGN -->
+                <div class="mb-12 animate-fade-up">
+                    <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-brand/10 text-brand mb-6 border border-brand/20">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" class="lucide lucide-check w-5 h-5"><path d="M20 6 9 17l-5-5"></path></svg>
+                    </div>
+                    <h2 class="hero-title text-4xl md:text-6xl text-white mb-6">
+                        Confirmed &amp; <span class="hero-accent">Scheduled</span>
+                    </h2>
+                    <p class="text-sm text-white/40 max-w-lg mx-auto">
+                        Your session is booked. Watch this brief 60-second video to prepare for our call.
+                    </p>
+                </div>
+
+                <!-- VIDEO CONTAINER -->
+                <div class="w-full max-w-3xl mx-auto aspect-video glass-card rounded-xl border border-white/5 flex items-center justify-center relative group cursor-pointer animate-fade-up" style="animation-delay: 0.1s;">
+                    <div class="absolute inset-0 bg-brand/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="flex flex-col items-center gap-3 relative z-10">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-lucide="play-circle" class="lucide lucide-play-circle w-12 h-12 text-white/70 group-hover:text-brand transition-colors"><path d="M9 9.003a1 1 0 0 1 1.517-.859l4.997 2.997a1 1 0 0 1 0 1.718l-4.997 2.997A1 1 0 0 1 9 14.996z"></path><circle cx="12" cy="12" r="10"></circle></svg>
+                        <span class="text-xs font-mono text-white/30 uppercase">Preparation_Video.mp4</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FEED REPEAT -->
+            <div class="container mx-auto px-4 md:px-6 mb-32 border-t border-white/5 pt-20">
+                <div class="text-center mb-16">
+                    <h3 class="font-display text-xl text-white/60">More Client Success Stories</h3>
+                </div>
+                <div id="results-feed-thankyou" class="grid grid-cols-1 gap-24">
+                    <div class="reveal-item flex flex-col md:flex-row items-center gap-12 group w-full max-w-5xl mx-auto">
+                        
+                        <!-- Typography Block -->
+                        <div class="w-full md:w-5/12 flex flex-col md:items-start text-center md:text-left relative z-10">
+                            <div class="flex items-center gap-3 mb-4 opacity-50 group-hover:opacity-100 transition-opacity">
+                                <span class="h-px w-8 bg-brand"></span>
+                                <span class="text-[10px] uppercase tracking-widest font-sans font-medium text-white/60">
+                                    Trading Coach
+                                </span>
+                                <span class="h-px w-8 bg-brand hidden"></span>
+                            </div>
+                            
+                            <h4 class="font-display text-2xl md:text-4xl font-medium leading-[1.1] text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-white/60 transition-all duration-500">
+                                "Generated $100,000 In Net Revenue In 3 Months"
+                            </h4>
+                        </div>
+
+                        <!-- Media Visual -->
+                        <div class="w-full md:w-7/12 relative">
+                            <div class="aspect-[16/9] w-full bg-black border border-white/5 rounded-sm overflow-hidden relative shadow-2xl transition-all duration-700 group-hover:scale-[1.02]">
+                                <!-- Inner Texture -->
+                                <div class="absolute inset-0 bg-noise opacity-20"></div>
+                                <div class="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent"></div>
+                                
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <div class="w-16 h-16 rounded-full border border-white/10 flex items-center justify-center backdrop-blur-sm bg-white/5 group-hover:scale-110 transition-transform duration-500">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-lucide="play" class="lucide lucide-play w-6 h-6 text-white/80"><path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z"></path></svg>
+                                    </div>
+                                </div>
+                                
+                                <!-- Tech Specs Corner -->
+                                <div class="absolute bottom-4 left-4 font-mono text-[9px] text-white/20 uppercase tracking-widest">
+                                    Asset_ID: 01 // video
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="reveal-item flex flex-col md:flex-row-reverse items-center gap-12 group w-full max-w-5xl mx-auto">
+                        
+                        <!-- Typography Block -->
+                        <div class="w-full md:w-5/12 flex flex-col md:items-end text-center md:text-right relative z-10">
+                            <div class="flex items-center gap-3 mb-4 opacity-50 group-hover:opacity-100 transition-opacity">
+                                <span class="h-px w-8 bg-brand"></span>
+                                <span class="text-[10px] uppercase tracking-widest font-sans font-medium text-white/60">
+                                    Spiritual Coach
+                                </span>
+                                <span class="h-px w-8 bg-brand block"></span>
+                            </div>
+                            
+                            <h4 class="font-display text-2xl md:text-4xl font-medium leading-[1.1] text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-white/60 transition-all duration-500">
+                                "I Don’t Wanna Talk To Anyone Else, This Is The Guy"
+                            </h4>
+                        </div>
+
+                        <!-- Media Visual -->
+                        <div class="w-full md:w-7/12 relative">
+                            <div class="aspect-[16/9] w-full bg-black border border-white/5 rounded-sm overflow-hidden relative shadow-2xl transition-all duration-700 group-hover:scale-[1.02]">
+                                <!-- Inner Texture -->
+                                <div class="absolute inset-0 bg-noise opacity-20"></div>
+                                <div class="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent"></div>
+                                
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <div class="w-16 h-16 rounded-full border border-white/10 flex items-center justify-center backdrop-blur-sm bg-white/5 group-hover:scale-110 transition-transform duration-500">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-lucide="play" class="lucide lucide-play w-6 h-6 text-white/80"><path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z"></path></svg>
+                                    </div>
+                                </div>
+                                
+                                <!-- Tech Specs Corner -->
+                                <div class="absolute bottom-4 left-4 font-mono text-[9px] text-white/20 uppercase tracking-widest">
+                                    Asset_ID: 02 // video
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="reveal-item flex flex-col md:flex-row items-center gap-12 group w-full max-w-5xl mx-auto">
+                        
+                        <!-- Typography Block -->
+                        <div class="w-full md:w-5/12 flex flex-col md:items-start text-center md:text-left relative z-10">
+                            <div class="flex items-center gap-3 mb-4 opacity-50 group-hover:opacity-100 transition-opacity">
+                                <span class="h-px w-8 bg-brand"></span>
+                                <span class="text-[10px] uppercase tracking-widest font-sans font-medium text-white/60">
+                                    Dev Creator
+                                </span>
+                                <span class="h-px w-8 bg-brand hidden"></span>
+                            </div>
+                            
+                            <h4 class="font-display text-2xl md:text-4xl font-medium leading-[1.1] text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-white/60 transition-all duration-500">
+                                "Generated 100K+ Views For Lewis Howes"
+                            </h4>
+                        </div>
+
+                        <!-- Media Visual -->
+                        <div class="w-full md:w-7/12 relative">
+                            <div class="aspect-[16/9] w-full bg-black border border-white/5 rounded-sm overflow-hidden relative shadow-2xl transition-all duration-700 group-hover:scale-[1.02]">
+                                <!-- Inner Texture -->
+                                <div class="absolute inset-0 bg-noise opacity-20"></div>
+                                <div class="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent"></div>
+                                
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <div class="w-16 h-16 rounded-full border border-white/10 flex items-center justify-center backdrop-blur-sm bg-white/5 group-hover:scale-110 transition-transform duration-500">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-lucide="image" class="lucide lucide-image w-6 h-6 text-white/80"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect><circle cx="9" cy="9" r="2"></circle><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></svg>
+                                    </div>
+                                </div>
+                                
+                                <!-- Tech Specs Corner -->
+                                <div class="absolute bottom-4 left-4 font-mono text-[9px] text-white/20 uppercase tracking-widest">
+                                    Asset_ID: 03 // photo
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="reveal-item flex flex-col md:flex-row-reverse items-center gap-12 group w-full max-w-5xl mx-auto">
+                        
+                        <!-- Typography Block -->
+                        <div class="w-full md:w-5/12 flex flex-col md:items-end text-center md:text-right relative z-10">
+                            <div class="flex items-center gap-3 mb-4 opacity-50 group-hover:opacity-100 transition-opacity">
+                                <span class="h-px w-8 bg-brand"></span>
+                                <span class="text-[10px] uppercase tracking-widest font-sans font-medium text-white/60">
+                                    Agency Owner
+                                </span>
+                                <span class="h-px w-8 bg-brand block"></span>
+                            </div>
+                            
+                            <h4 class="font-display text-2xl md:text-4xl font-medium leading-[1.1] text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-white/60 transition-all duration-500">
+                                "The Content Actually Converts, Highly Recommended"
+                            </h4>
+                        </div>
+
+                        <!-- Media Visual -->
+                        <div class="w-full md:w-7/12 relative">
+                            <div class="aspect-[16/9] w-full bg-black border border-white/5 rounded-sm overflow-hidden relative shadow-2xl transition-all duration-700 group-hover:scale-[1.02]">
+                                <!-- Inner Texture -->
+                                <div class="absolute inset-0 bg-noise opacity-20"></div>
+                                <div class="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent"></div>
+                                
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <div class="w-16 h-16 rounded-full border border-white/10 flex items-center justify-center backdrop-blur-sm bg-white/5 group-hover:scale-110 transition-transform duration-500">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-lucide="play" class="lucide lucide-play w-6 h-6 text-white/80"><path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z"></path></svg>
+                                    </div>
+                                </div>
+                                
+                                <!-- Tech Specs Corner -->
+                                <div class="absolute bottom-4 left-4 font-mono text-[9px] text-white/20 uppercase tracking-widest">
+                                    Asset_ID: 04 // video
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="reveal-item flex flex-col md:flex-row items-center gap-12 group w-full max-w-5xl mx-auto">
+                        
+                        <!-- Typography Block -->
+                        <div class="w-full md:w-5/12 flex flex-col md:items-start text-center md:text-left relative z-10">
+                            <div class="flex items-center gap-3 mb-4 opacity-50 group-hover:opacity-100 transition-opacity">
+                                <span class="h-px w-8 bg-brand"></span>
+                                <span class="text-[10px] uppercase tracking-widest font-sans font-medium text-white/60">
+                                    Trading Coach
+                                </span>
+                                <span class="h-px w-8 bg-brand hidden"></span>
+                            </div>
+                            
+                            <h4 class="font-display text-2xl md:text-4xl font-medium leading-[1.1] text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-white/60 transition-all duration-500">
+                                "$20K Revenue, $12K Cash Collected In 48 Hours"
+                            </h4>
+                        </div>
+
+                        <!-- Media Visual -->
+                        <div class="w-full md:w-7/12 relative">
+                            <div class="aspect-[16/9] w-full bg-black border border-white/5 rounded-sm overflow-hidden relative shadow-2xl transition-all duration-700 group-hover:scale-[1.02]">
+                                <!-- Inner Texture -->
+                                <div class="absolute inset-0 bg-noise opacity-20"></div>
+                                <div class="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent"></div>
+                                
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <div class="w-16 h-16 rounded-full border border-white/10 flex items-center justify-center backdrop-blur-sm bg-white/5 group-hover:scale-110 transition-transform duration-500">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-lucide="image" class="lucide lucide-image w-6 h-6 text-white/80"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect><circle cx="9" cy="9" r="2"></circle><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></svg>
+                                    </div>
+                                </div>
+                                
+                                <!-- Tech Specs Corner -->
+                                <div class="absolute bottom-4 left-4 font-mono text-[9px] text-white/20 uppercase tracking-widest">
+                                    Asset_ID: 05 // photo
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="reveal-item flex flex-col md:flex-row-reverse items-center gap-12 group w-full max-w-5xl mx-auto">
+                        
+                        <!-- Typography Block -->
+                        <div class="w-full md:w-5/12 flex flex-col md:items-end text-center md:text-right relative z-10">
+                            <div class="flex items-center gap-3 mb-4 opacity-50 group-hover:opacity-100 transition-opacity">
+                                <span class="h-px w-8 bg-brand"></span>
+                                <span class="text-[10px] uppercase tracking-widest font-sans font-medium text-white/60">
+                                    Affiliate Coach
+                                </span>
+                                <span class="h-px w-8 bg-brand block"></span>
+                            </div>
+                            
+                            <h4 class="font-display text-2xl md:text-4xl font-medium leading-[1.1] text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-white/60 transition-all duration-500">
+                                "286K+ Views In Less Than 14 Days"
+                            </h4>
+                        </div>
+
+                        <!-- Media Visual -->
+                        <div class="w-full md:w-7/12 relative">
+                            <div class="aspect-[16/9] w-full bg-black border border-white/5 rounded-sm overflow-hidden relative shadow-2xl transition-all duration-700 group-hover:scale-[1.02]">
+                                <!-- Inner Texture -->
+                                <div class="absolute inset-0 bg-noise opacity-20"></div>
+                                <div class="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent"></div>
+                                
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <div class="w-16 h-16 rounded-full border border-white/10 flex items-center justify-center backdrop-blur-sm bg-white/5 group-hover:scale-110 transition-transform duration-500">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-lucide="image" class="lucide lucide-image w-6 h-6 text-white/80"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect><circle cx="9" cy="9" r="2"></circle><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></svg>
+                                    </div>
+                                </div>
+                                
+                                <!-- Tech Specs Corner -->
+                                <div class="absolute bottom-4 left-4 font-mono text-[9px] text-white/20 uppercase tracking-widest">
+                                    Asset_ID: 06 // photo
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="reveal-item flex flex-col md:flex-row items-center gap-12 group w-full max-w-5xl mx-auto">
+                        
+                        <!-- Typography Block -->
+                        <div class="w-full md:w-5/12 flex flex-col md:items-start text-center md:text-left relative z-10">
+                            <div class="flex items-center gap-3 mb-4 opacity-50 group-hover:opacity-100 transition-opacity">
+                                <span class="h-px w-8 bg-brand"></span>
+                                <span class="text-[10px] uppercase tracking-widest font-sans font-medium text-white/60">
+                                    Trading Coach
+                                </span>
+                                <span class="h-px w-8 bg-brand hidden"></span>
+                            </div>
+                            
+                            <h4 class="font-display text-2xl md:text-4xl font-medium leading-[1.1] text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-white/60 transition-all duration-500">
+                                "Added $50,000 In Revenue For This Coach"
+                            </h4>
+                        </div>
+
+                        <!-- Media Visual -->
+                        <div class="w-full md:w-7/12 relative">
+                            <div class="aspect-[16/9] w-full bg-black border border-white/5 rounded-sm overflow-hidden relative shadow-2xl transition-all duration-700 group-hover:scale-[1.02]">
+                                <!-- Inner Texture -->
+                                <div class="absolute inset-0 bg-noise opacity-20"></div>
+                                <div class="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent"></div>
+                                
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <div class="w-16 h-16 rounded-full border border-white/10 flex items-center justify-center backdrop-blur-sm bg-white/5 group-hover:scale-110 transition-transform duration-500">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-lucide="image" class="lucide lucide-image w-6 h-6 text-white/80"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect><circle cx="9" cy="9" r="2"></circle><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></svg>
+                                    </div>
+                                </div>
+                                
+                                <!-- Tech Specs Corner -->
+                                <div class="absolute bottom-4 left-4 font-mono text-[9px] text-white/20 uppercase tracking-widest">
+                                    Asset_ID: 07 // photo
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="reveal-item flex flex-col md:flex-row-reverse items-center gap-12 group w-full max-w-5xl mx-auto">
+                        
+                        <!-- Typography Block -->
+                        <div class="w-full md:w-5/12 flex flex-col md:items-end text-center md:text-right relative z-10">
+                            <div class="flex items-center gap-3 mb-4 opacity-50 group-hover:opacity-100 transition-opacity">
+                                <span class="h-px w-8 bg-brand"></span>
+                                <span class="text-[10px] uppercase tracking-widest font-sans font-medium text-white/60">
+                                    Lifestyle Influencer
+                                </span>
+                                <span class="h-px w-8 bg-brand block"></span>
+                            </div>
+                            
+                            <h4 class="font-display text-2xl md:text-4xl font-medium leading-[1.1] text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-white/60 transition-all duration-500">
+                                "Scaled From 350 Views to 110K Views On YouTube"
+                            </h4>
+                        </div>
+
+                        <!-- Media Visual -->
+                        <div class="w-full md:w-7/12 relative">
+                            <div class="aspect-[16/9] w-full bg-black border border-white/5 rounded-sm overflow-hidden relative shadow-2xl transition-all duration-700 group-hover:scale-[1.02]">
+                                <!-- Inner Texture -->
+                                <div class="absolute inset-0 bg-noise opacity-20"></div>
+                                <div class="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent"></div>
+                                
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <div class="w-16 h-16 rounded-full border border-white/10 flex items-center justify-center backdrop-blur-sm bg-white/5 group-hover:scale-110 transition-transform duration-500">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-lucide="image" class="lucide lucide-image w-6 h-6 text-white/80"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect><circle cx="9" cy="9" r="2"></circle><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></svg>
+                                    </div>
+                                </div>
+                                
+                                <!-- Tech Specs Corner -->
+                                <div class="absolute bottom-4 left-4 font-mono text-[9px] text-white/20 uppercase tracking-widest">
+                                    Asset_ID: 08 // photo
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="reveal-item flex flex-col md:flex-row items-center gap-12 group w-full max-w-5xl mx-auto">
+                        
+                        <!-- Typography Block -->
+                        <div class="w-full md:w-5/12 flex flex-col md:items-start text-center md:text-left relative z-10">
+                            <div class="flex items-center gap-3 mb-4 opacity-50 group-hover:opacity-100 transition-opacity">
+                                <span class="h-px w-8 bg-brand"></span>
+                                <span class="text-[10px] uppercase tracking-widest font-sans font-medium text-white/60">
+                                    Fashion Influencer
+                                </span>
+                                <span class="h-px w-8 bg-brand hidden"></span>
+                            </div>
+                            
+                            <h4 class="font-display text-2xl md:text-4xl font-medium leading-[1.1] text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-white/60 transition-all duration-500">
+                                "1.1M+ Views Generated Organically"
+                            </h4>
+                        </div>
+
+                        <!-- Media Visual -->
+                        <div class="w-full md:w-7/12 relative">
+                            <div class="aspect-[16/9] w-full bg-black border border-white/5 rounded-sm overflow-hidden relative shadow-2xl transition-all duration-700 group-hover:scale-[1.02]">
+                                <!-- Inner Texture -->
+                                <div class="absolute inset-0 bg-noise opacity-20"></div>
+                                <div class="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent"></div>
+                                
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <div class="w-16 h-16 rounded-full border border-white/10 flex items-center justify-center backdrop-blur-sm bg-white/5 group-hover:scale-110 transition-transform duration-500">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-lucide="image" class="lucide lucide-image w-6 h-6 text-white/80"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect><circle cx="9" cy="9" r="2"></circle><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></svg>
+                                    </div>
+                                </div>
+                                
+                                <!-- Tech Specs Corner -->
+                                <div class="absolute bottom-4 left-4 font-mono text-[9px] text-white/20 uppercase tracking-widest">
+                                    Asset_ID: 09 // photo
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="reveal-item flex flex-col md:flex-row-reverse items-center gap-12 group w-full max-w-5xl mx-auto">
+                        
+                        <!-- Typography Block -->
+                        <div class="w-full md:w-5/12 flex flex-col md:items-end text-center md:text-right relative z-10">
+                            <div class="flex items-center gap-3 mb-4 opacity-50 group-hover:opacity-100 transition-opacity">
+                                <span class="h-px w-8 bg-brand"></span>
+                                <span class="text-[10px] uppercase tracking-widest font-sans font-medium text-white/60">
+                                    Trading Coach
+                                </span>
+                                <span class="h-px w-8 bg-brand block"></span>
+                            </div>
+                            
+                            <h4 class="font-display text-2xl md:text-4xl font-medium leading-[1.1] text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-white/60 transition-all duration-500">
+                                "Booked 6 Calls From One Instagram Story"
+                            </h4>
+                        </div>
+
+                        <!-- Media Visual -->
+                        <div class="w-full md:w-7/12 relative">
+                            <div class="aspect-[16/9] w-full bg-black border border-white/5 rounded-sm overflow-hidden relative shadow-2xl transition-all duration-700 group-hover:scale-[1.02]">
+                                <!-- Inner Texture -->
+                                <div class="absolute inset-0 bg-noise opacity-20"></div>
+                                <div class="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent"></div>
+                                
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <div class="w-16 h-16 rounded-full border border-white/10 flex items-center justify-center backdrop-blur-sm bg-white/5 group-hover:scale-110 transition-transform duration-500">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-lucide="image" class="lucide lucide-image w-6 h-6 text-white/80"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect><circle cx="9" cy="9" r="2"></circle><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></svg>
+                                    </div>
+                                </div>
+                                
+                                <!-- Tech Specs Corner -->
+                                <div class="absolute bottom-4 left-4 font-mono text-[9px] text-white/20 uppercase tracking-widest">
+                                    Asset_ID: 010 // photo
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="reveal-item flex flex-col md:flex-row items-center gap-12 group w-full max-w-5xl mx-auto">
+                        
+                        <!-- Typography Block -->
+                        <div class="w-full md:w-5/12 flex flex-col md:items-start text-center md:text-left relative z-10">
+                            <div class="flex items-center gap-3 mb-4 opacity-50 group-hover:opacity-100 transition-opacity">
+                                <span class="h-px w-8 bg-brand"></span>
+                                <span class="text-[10px] uppercase tracking-widest font-sans font-medium text-white/60">
+                                    Sales Coach
+                                </span>
+                                <span class="h-px w-8 bg-brand hidden"></span>
+                            </div>
+                            
+                            <h4 class="font-display text-2xl md:text-4xl font-medium leading-[1.1] text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-white/60 transition-all duration-500">
+                                "Closed Someone For $5K After One Training Call"
+                            </h4>
+                        </div>
+
+                        <!-- Media Visual -->
+                        <div class="w-full md:w-7/12 relative">
+                            <div class="aspect-[16/9] w-full bg-black border border-white/5 rounded-sm overflow-hidden relative shadow-2xl transition-all duration-700 group-hover:scale-[1.02]">
+                                <!-- Inner Texture -->
+                                <div class="absolute inset-0 bg-noise opacity-20"></div>
+                                <div class="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent"></div>
+                                
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <div class="w-16 h-16 rounded-full border border-white/10 flex items-center justify-center backdrop-blur-sm bg-white/5 group-hover:scale-110 transition-transform duration-500">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-lucide="image" class="lucide lucide-image w-6 h-6 text-white/80"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect><circle cx="9" cy="9" r="2"></circle><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></svg>
+                                    </div>
+                                </div>
+                                
+                                <!-- Tech Specs Corner -->
+                                <div class="absolute bottom-4 left-4 font-mono text-[9px] text-white/20 uppercase tracking-widest">
+                                    Asset_ID: 011 // photo
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="reveal-item flex flex-col md:flex-row-reverse items-center gap-12 group w-full max-w-5xl mx-auto">
+                        
+                        <!-- Typography Block -->
+                        <div class="w-full md:w-5/12 flex flex-col md:items-end text-center md:text-right relative z-10">
+                            <div class="flex items-center gap-3 mb-4 opacity-50 group-hover:opacity-100 transition-opacity">
+                                <span class="h-px w-8 bg-brand"></span>
+                                <span class="text-[10px] uppercase tracking-widest font-sans font-medium text-white/60">
+                                    Trading Coach
+                                </span>
+                                <span class="h-px w-8 bg-brand block"></span>
+                            </div>
+                            
+                            <h4 class="font-display text-2xl md:text-4xl font-medium leading-[1.1] text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-white/60 transition-all duration-500">
+                                "Generated 22 Qualified Leads In 2 Hours"
+                            </h4>
+                        </div>
+
+                        <!-- Media Visual -->
+                        <div class="w-full md:w-7/12 relative">
+                            <div class="aspect-[16/9] w-full bg-black border border-white/5 rounded-sm overflow-hidden relative shadow-2xl transition-all duration-700 group-hover:scale-[1.02]">
+                                <!-- Inner Texture -->
+                                <div class="absolute inset-0 bg-noise opacity-20"></div>
+                                <div class="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent"></div>
+                                
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <div class="w-16 h-16 rounded-full border border-white/10 flex items-center justify-center backdrop-blur-sm bg-white/5 group-hover:scale-110 transition-transform duration-500">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-lucide="image" class="lucide lucide-image w-6 h-6 text-white/80"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect><circle cx="9" cy="9" r="2"></circle><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></svg>
+                                    </div>
+                                </div>
+                                
+                                <!-- Tech Specs Corner -->
+                                <div class="absolute bottom-4 left-4 font-mono text-[9px] text-white/20 uppercase tracking-widest">
+                                    Asset_ID: 012 // photo
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RESOURCES -->
+            <div class="bg-white/[0.02] border-t border-white/5 py-24">
+                <div class="container mx-auto px-4 md:px-6">
+                    <div class="max-w-4xl mx-auto">
+                        <div class="flex items-center gap-4 mb-12">
+                            <span class="w-8 h-px bg-brand"></span>
+                            <h2 class="font-display text-2xl text-white">Complimentary Resources</h2>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <!-- Resource 1 -->
+                            <div class="group p-6 glass-card rounded-xl hover:bg-white/5 transition-all cursor-pointer">
+                                <div class="flex justify-between items-start mb-8">
+                                    <div class="p-3 bg-white/5 rounded-lg text-white/60 group-hover:text-brand transition-colors">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-lucide="file-text" class="lucide lucide-file-text w-5 h-5"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"></path><path d="M14 2v5a1 1 0 0 0 1 1h5"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg>
+                                    </div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-up-right" class="lucide lucide-arrow-up-right w-4 h-4 text-white/20 group-hover:text-white transition-colors"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg>
+                                </div>
+                                <h3 class="font-display text-lg text-white mb-2">The Scaling Manifesto</h3>
+                                <p class="text-xs text-white/40 leading-relaxed">A comprehensive guide on structuring your offer for maximum leverage.</p>
+                            </div>
+
+                            <!-- Resource 2 -->
+                            <div class="group p-6 glass-card rounded-xl hover:bg-white/5 transition-all cursor-pointer">
+                                <div class="flex justify-between items-start mb-8">
+                                    <div class="p-3 bg-white/5 rounded-lg text-white/60 group-hover:text-brand transition-colors">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-lucide="pie-chart" class="lucide lucide-pie-chart w-5 h-5"><path d="M21 12c.552 0 1.005-.449.95-.998a10 10 0 0 0-8.953-8.951c-.55-.055-.998.398-.998.95v8a1 1 0 0 0 1 1z"></path><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path></svg>
+                                    </div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-up-right" class="lucide lucide-arrow-up-right w-4 h-4 text-white/20 group-hover:text-white transition-colors"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg>
+                                </div>
+                                <h3 class="font-display text-lg text-white mb-2">Conversion Metrics</h3>
+                                <p class="text-xs text-white/40 leading-relaxed">Template to track your KPIs and identify bottlenecks in your funnel.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="py-12 border-t border-white/5 text-center relative z-10 bg-[#030303]">
+        <div class="flex justify-center items-center gap-2 mb-4 opacity-50">
+            <span class="w-1 h-1 rounded-full bg-white/40"></span>
+            <span class="w-1 h-1 rounded-full bg-white/40"></span>
+            <span class="w-1 h-1 rounded-full bg-white/40"></span>
+        </div>
+        <p class="font-display text-[10px] text-white/20 tracking-widest uppercase">
+            © Social Collars — All Rights Reserved
+        </p>
+    </footer>
+
+    <!-- LOGIC -->
+    <script>
+        // DATA
+        const feedData = [
+            { type: 'video', role: 'Trading Coach', text: "Generated $100,000 In Net Revenue In 3 Months" },
+            { type: 'video', role: 'Spiritual Coach', text: "I Don’t Wanna Talk To Anyone Else, This Is The Guy" },
+            { type: 'photo', role: 'Dev Creator', text: "Generated 100K+ Views For Lewis Howes" },
+            { type: 'video', role: 'Agency Owner', text: "The Content Actually Converts, Highly Recommended" },
+            { type: 'photo', role: 'Trading Coach', text: "$20K Revenue, $12K Cash Collected In 48 Hours" },
+            { type: 'photo', role: 'Affiliate Coach', text: "286K+ Views In Less Than 14 Days" },
+            { type: 'photo', role: 'Trading Coach', text: "Added $50,000 In Revenue For This Coach" },
+            { type: 'photo', role: 'Lifestyle Influencer', text: "Scaled From 350 Views to 110K Views On YouTube" },
+            { type: 'photo', role: 'Fashion Influencer', text: "1.1M+ Views Generated Organically" },
+            { type: 'photo', role: 'Trading Coach', text: "Booked 6 Calls From One Instagram Story" },
+            { type: 'photo', role: 'Sales Coach', text: "Closed Someone For $5K After One Training Call" },
+            { type: 'photo', role: 'Trading Coach', text: "Generated 22 Qualified Leads In 2 Hours" }
+        ];
+
+        // RENDER LOGIC
+        function renderFeed(containerId) {
+            const container = document.getElementById(containerId);
+            if(!container) return;
+            container.innerHTML = '';
+
+            feedData.forEach((item, index) => {
+                const isEven = index % 2 === 0;
+                // Alternating layout logic for high-end feel
+                const flexDir = isEven ? 'md:flex-row' : 'md:flex-row-reverse';
+                const textAlign = isEven ? 'md:text-left' : 'md:text-right';
+                const itemsAlign = isEven ? 'md:items-start' : 'md:items-end';
+                
+                const html = `
+                    <div class="reveal-item flex flex-col ${flexDir} items-center gap-12 group w-full max-w-5xl mx-auto">
+                        
+                        <!-- Typography Block -->
+                        <div class="w-full md:w-5/12 flex flex-col ${itemsAlign} text-center ${textAlign} relative z-10">
+                            <div class="flex items-center gap-3 mb-4 opacity-50 group-hover:opacity-100 transition-opacity">
+                                <span class="h-px w-8 bg-brand"></span>
+                                <span class="text-[10px] uppercase tracking-widest font-sans font-medium text-white/60">
+                                    ${item.role}
+                                </span>
+                                <span class="h-px w-8 bg-brand ${isEven ? 'hidden' : 'block'}"></span>
+                            </div>
+                            
+                            <h4 class="font-display text-2xl md:text-4xl font-medium leading-[1.1] text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-white/60 transition-all duration-500">
+                                "${item.text}"
+                            </h4>
+                        </div>
+
+                        <!-- Media Visual -->
+                        <div class="w-full md:w-7/12 relative">
+                            <div class="aspect-[16/9] w-full bg-black border border-white/5 rounded-sm overflow-hidden relative shadow-2xl transition-all duration-700 group-hover:scale-[1.02]">
+                                <!-- Inner Texture -->
+                                <div class="absolute inset-0 bg-noise opacity-20"></div>
+                                <div class="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent"></div>
+                                
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <div class="w-16 h-16 rounded-full border border-white/10 flex items-center justify-center backdrop-blur-sm bg-white/5 group-hover:scale-110 transition-transform duration-500">
+                                        <i data-lucide="${item.type === 'video' ? 'play' : 'image'}" class="w-6 h-6 text-white/80"></i>
+                                    </div>
+                                </div>
+                                
+                                <!-- Tech Specs Corner -->
+                                <div class="absolute bottom-4 left-4 font-mono text-[9px] text-white/20 uppercase tracking-widest">
+                                    Asset_ID: 0${index + 1} // ${item.type}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                container.insertAdjacentHTML('beforeend', html);
+            });
+        }
+
+        // ANIMATION OBSERVER
+        function initObserver() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('reveal-active');
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: "0px 0px -100px 0px" });
+
+            document.querySelectorAll('.reveal-item').forEach((el) => observer.observe(el));
+        }
+
+        // ROUTER
+        const router = {
+            navigate: function(pageId) {
+                window.scrollTo({ top: 0, behavior: 'instant' });
+                document.querySelectorAll('.page-view').forEach(p => {
+                    p.classList.add('hidden');
+                    p.classList.remove('animate-fade-up');
+                });
+                
+                const target = document.getElementById(`page-${pageId}`);
+                if (target) {
+                    target.classList.remove('hidden');
+                    // Trigger reflow to restart animations if needed
+                    void target.offsetWidth; 
+                    setTimeout(() => {
+                        initObserver();
+                        lucide.createIcons();
+                    }, 50);
+                }
+            }
+        };
+
+        // INIT
+        document.addEventListener('DOMContentLoaded', () => {
+            renderFeed('results-feed-home');
+            renderFeed('results-feed-thankyou');
+            lucide.createIcons({ attrs: { 'stroke-width': 1.5 } });
+            initObserver();
+        });
+
+    </script>
+</body></html>
